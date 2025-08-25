@@ -2,6 +2,14 @@ import { createConnection, Connection } from 'typeorm';
 
 import * as entities from 'entities';
 
+
+console.log(process.env.DB_HOST);
+console.log(process.env.DB_PORT);
+console.log(process.env.DB_USERNAME);
+console.log(process.env.DB_PASSWORD);
+console.log(process.env.DB_DATABASE);
+
+
 const createDatabaseConnection = (): Promise<Connection> =>
   createConnection({
     type: 'postgres',

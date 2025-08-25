@@ -12,6 +12,8 @@ import { RouteNotFoundError } from 'errors';
 
 import { attachPublicRoutes, attachPrivateRoutes } from './routes';
 
+
+
 const establishDatabaseConnection = async (): Promise<void> => {
   try {
     await createDatabaseConnection();
@@ -38,7 +40,18 @@ const initializeExpress = (): void => {
   app.use((req, _res, next) => next(new RouteNotFoundError(req.originalUrl)));
   app.use(handleError);
 
-  app.listen(process.env.PORT || 3000);
+
+ console.log(process.env.PORT);
+
+
+  app.listen(process.env.PORT || 12345);
+
+
+
+
+
+
+
 };
 
 const initializeApp = async (): Promise<void> => {

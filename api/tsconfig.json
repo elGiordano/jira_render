@@ -21,7 +21,12 @@
     "moduleResolution": "node",
     "baseUrl": "src",
     "paths": {
-      "*": ["./*"]
+      "*": ["./*"],
+      "database/*": ["database/*"],
+      "middleware/*": ["middleware/*"],
+      "errors": ["errors"],
+      "module-alias/register": ["../node_modules/module-alias/register"]
+
     },
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
